@@ -4,7 +4,7 @@
 
 This repository contains SQL queries and analysis for the Delivr app, which is an online food ordering platform. The queries provide insights into various aspects of the business, including user spending, revenue, costs, and profitability. Below is a summary of the analysis conducted.
 
-Queries
+## Queries
 
 1.**Sum of Amounts Spent by User ID 17**: This query calculates the total amount spent by user ID 17 on Delivr orders.
 
