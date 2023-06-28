@@ -10,12 +10,12 @@ WHERE user_id=17;
 -- 2.What is the revenue per week in July 2022, and is there consistent growth observed throughout the month?
 
 SELECT
-	DATE_TRUNCT('week', order_date) :: DATE AS delivr_week
+	DATE_TRUNC('week', order_date) :: DATE AS delivr_week
 	SUM(meal_price * order_quantity) AS revenue
 FROM meals m
  INNER JOIN orders o
   ON m.meal_id = o.meal_id
-WHERE DATE_TRUNCT('month', order_date) :: DATE = '2022-07-01'
+WHERE DATE_TRUNC('month', order_date) :: DATE = '2022-07-01'
 GROUP BY delivr_week
 ORDER BY delivr_week;
 
@@ -49,7 +49,7 @@ LIMIT 5;
 
 WITH monthly_cost AS (
  SELECT
-  	DATE_TRUNCT('month', stocking_date) :: DATE AS delivr_month,
+  	DATE_TRUNC('month', stocking_date) :: DATE AS delivr_month,
   	SUM(meal_cost * stocked_quantity) AS cost
  FROM meals m
   INNER JOIN stock s
@@ -99,7 +99,7 @@ ORDER BY profit DESC;
 --revenue per eatery
 WITH revenue AS (
  SELECT
-	DATE_TRUNCT('month', order_date) :: DATE AS delivr_month,
+	DATE_TRUNC('month', order_date) :: DATE AS delivr_month,
 	SUM(meal_price * order_quantity) AS revenue
  FROM meals m
   INNER JOIN orders o
@@ -109,7 +109,7 @@ WITH revenue AS (
  -- cost per eatery
  cost AS (
  SELECT
-	DATE_TRUNCT('month', stocking_date) :: DATE AS delivr_month
+	DATE_TRUNC('month', stocking_date) :: DATE AS delivr_month
 	SUM(meal_price * stocked_quantity) AS cost
  FROM meals m
   INNER JOIN stock s
