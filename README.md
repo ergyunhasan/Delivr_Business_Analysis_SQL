@@ -8,7 +8,7 @@ Queries
 
 1.**Sum of Amounts Spent by User ID 17**: This query calculates the total amount spent by user ID 17 on Delivr orders.
 
-2**.Revenue per Week in July 2022**: This query calculates the revenue generated per week in July 2022 and determines if there is consistent growth observed throughout the month.
+2.**Revenue per Week in July 2022**: This query calculates the revenue generated per week in July 2022 and determines if there is consistent growth observed throughout the month.
 
 3.**Total Cost Since Delivr Began Operating**: This query calculates the total cost incurred by Delivr since it began operating by considering the cost of stocking meals.
 
