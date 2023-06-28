@@ -53,7 +53,7 @@ WITH monthly_cost AS (
   	SUM(meal_cost * stcoked_quantity) AS cost
  FROM meals m
   INNER JOIN stock s
-   ON m.meal_id = s,meal_id	
+   ON m.meal_id = s.meal_id	
  GROUP BY delivr_month
  ORDER BY delivr_month)
 
